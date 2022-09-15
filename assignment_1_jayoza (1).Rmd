@@ -1,0 +1,17 @@
+---
+title: "R Notebook"
+output:
+  pdf_document: default
+  html_notebook: default
+---
+
+
+
+```{r}
+library(tidyverse)
+data(diamonds)
+diamonds.x <- mutate(diamonds, price_INR = price * 80)
+ggplot(diamonds.x, mapping = aes(x = carat, y = depth, color = cut)) + geom_point()
+
+```
+
